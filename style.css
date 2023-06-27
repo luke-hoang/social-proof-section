@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+  /* colors */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'League Spartan', sans-serif;
+  background-image:
+    url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    left top,
+    right bottom;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1110px;
+  display: grid;
+  grid-template-columns: 445px 540px;
+  grid-template-rows: 1fr 266px;
+  column-gap: 115px;
+  row-gap: 70px;
+  grid-template-areas: 
+    "introduction ratings"
+    "testimonials testimonials";
+}
+
+/* introduction */
+
+.introduction {
+  grid-area: introduction;
+}
+
+.introduction h1 {
+  color: var(--very-dark-magenta);
+  font-size: 56px;
+  line-height: 48px;
+  margin-bottom: 16px;
+}
+
+.introduction p {
+  color: var(--dark-grayish-magenta);
+  font-size: 19px;
+  line-height: 25px;
+}
+
+/* ratings */
+
+.ratings {
+  grid-area: ratings;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.rating {
+  width: 445px;
+  background-color: var(--light-grayish-magenta);
+  padding: 20px 0 20px 32px;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+
+.rating img+img {
+  margin-left: 8px;
+}
+
+.rating span {
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 32px;
+  color: var(--very-dark-magenta);
+  vertical-align: top;
+}
+
+.rating:nth-child(1) {
+  align-self: start;
+}
+
+.rating:nth-child(2) {
+  align-self: center;
+}
+
+.rating:nth-child(3) {
+  align-self: end;
+}
+
+/* testimonials */
+
+.testimonials {
+  grid-area: testimonials;
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial {
+  background-color: var(--very-dark-magenta);
+  color: white;
+  width: 350px;
+  height: 234px;
+  padding: 40px 32px;
+  border-radius: 10px;
+}
+
+.testimonial figure {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.testimonial img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.testimonial figcaption {
+  padding-left: 23px;
+}
+
+.testimonial h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.testimonial p {
+  font-size: 17px;
+  color: var(--soft-pink);
+}
+
+.testimonial blockquote {
+  font: 17px;
+  line-height: 22px;
+}
+
+.testimonial:nth-child(1) { 
+  align-self: start;
+}
+
+.testimonial:nth-child(2) { 
+  align-self: center;
+}
+
+.testimonial:nth-child(3) { 
+  align-self: end;
+}
